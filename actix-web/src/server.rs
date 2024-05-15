@@ -147,6 +147,12 @@ where
         self
     }
 
+    /// Sets a closure that will be invoked on the start of every worker.
+    pub fn on_worker_start<C: Fn() + Send + Sync + 'static>(mut self, c: C) -> Self {
+        self.builder = self.builder.on_thread_start(c);
+        self
+    }
+
     /// Sets server keep-alive preference.
     ///
     /// By default keep-alive is set to 5 seconds.

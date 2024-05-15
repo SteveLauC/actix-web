@@ -86,7 +86,7 @@ experimental-io-uring = ["actix-server/io-uring"]
 actix-codec = "0.5"
 actix-macros = { version = "0.2.3", optional = true }
 actix-rt = { version = "2.6", default-features = false }
-actix-server = "2"
+actix-server = { git = "https://github.com/SteveLauC/actix-net", branch = "feat/on_worker_start" }
 actix-service = "2"
 actix-utils = "3"
 actix-tls = { version = "3.3", default-features = false, optional = true }
